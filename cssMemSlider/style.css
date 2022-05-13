@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #1e66f53a,
+    #1e66f53a 20px,
+    #cccccc 20px,
+    #cccccc 40px
+  );
+}
+.img1 {background-image: url(/cssMemSlider/scr/img/1.jpg)}
+.img2 {background-image: url(/cssMemSlider/scr/img/2.jpg)}
+.img3 {background-image: url(/cssMemSlider/scr/img/3.jpg)}
+.img4 {background-image: url(/cssMemSlider/scr/img/4.jpg)}
+.img5 {background-image: url(/cssMemSlider/scr/img/5.jpg)}
+
