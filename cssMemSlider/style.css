@@ -20,12 +20,18 @@ body {
 .img5 {background-image: url(/cssMemSlider/scr/img/5.jpg)}
 
 .wrapper {
-  height: 500px;
+  height: 40em;
   margin: 100px auto 0;
   position: relative;
-  width: 600px;
+  width: 80%;
+}
+.wrapper input{
+  display: none;
 }
 ul.slider {
+  display: flex;
+    align-items: center;
+    justify-content: center;
   background-color: #ffffff;
   height: inherit;
   overflow: hidden;
@@ -33,6 +39,7 @@ ul.slider {
   width: inherit;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   background-color: black;
+  margin: 0 auto;
   list-style-type: none;
 }
 li.slides {
@@ -50,6 +57,7 @@ li.slides {
 .img {
   width: inherit;
   height: 90%;
+  margin: 0 auto;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
