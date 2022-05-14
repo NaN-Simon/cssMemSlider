@@ -13,11 +13,21 @@ body {
     #cccccc 40px
   );
 }
-.img1 {background-image: url(/cssMemSlider/scr/img/1.jpg)}
-.img2 {background-image: url(/cssMemSlider/scr/img/2.jpg)}
-.img3 {background-image: url(/cssMemSlider/scr/img/3.jpg)}
-.img4 {background-image: url(/cssMemSlider/scr/img/4.jpg)}
-.img5 {background-image: url(/cssMemSlider/scr/img/5.jpg)}
+.img1 {
+  background-image: url(./scr/img/1.jpg);
+}
+.img2 {
+  background-image: url(./scr/img/2.jpg);
+}
+.img3 {
+  background-image: url(./scr/img/3.jpg);
+}
+.img4 {
+  background-image: url(./scr/img/4.jpg);
+}
+.img5 {
+  background-image: url(./scr/img/5.jpg);
+}
 
 .wrapper {
   height: 40em;
@@ -25,13 +35,13 @@ body {
   position: relative;
   width: 80%;
 }
-.wrapper input{
+.wrapper input {
   display: none;
 }
 ul.slider {
   display: flex;
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
   background-color: #ffffff;
   height: inherit;
   overflow: hidden;
@@ -92,16 +102,20 @@ label:nth-child(1),
 label:nth-child(2),
 label:nth-child(3),
 label:nth-child(4),
-label:nth-child(5){
+label:nth-child(5) {
   width: 20px;
   height: 20px;
   background-color: #5308ea8d;
+}
+.controls {
+  display: flex;
+  justify-content: center;
 }
 .wrapper label:hover,
 #checkbox1:checked ~ .controls label:nth-of-type(1),
 #checkbox2:checked ~ .controls label:nth-of-type(2),
 #checkbox3:checked ~ .controls label:nth-of-type(3),
 #checkbox4:checked ~ .controls label:nth-of-type(4),
-#checkbox5:checked ~ .controls label:nth-of-type(5){
+#checkbox5:checked ~ .controls label:nth-of-type(5) {
   background: #e8e8e8;
 }
