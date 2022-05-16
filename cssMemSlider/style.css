@@ -91,11 +91,11 @@ li.slides {
   padding-top: 8px;
   color: white;
 }
-/* @media (max-width: 620px) {
+@media (max-width: 620px) {
   .img-description {
-    font-size: 14px;
+    font-size: 0.8em;
   }
-} */
+}
 #checkbox1:checked ~ .slider .slide1,
 #checkbox2:checked ~ .slider .slide2,
 #checkbox3:checked ~ .slider .slide3,
