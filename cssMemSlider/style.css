@@ -66,16 +66,17 @@ ul.slider {
 }
 li.slides {
   height: inherit;
-  position: absolute;
   width: inherit;
   height: inherit;
   opacity: 0;
-  position: absolute;
+  position: relative;
   width: 100%;
   z-index: 0;
   transform: scale(1.5);
-  transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
+  animation: animate 1s ease-in-out;
 }
+
+
 .img {
   width: inherit;
   height: inherit;
@@ -90,30 +91,26 @@ li.slides {
   text-align: center;
   padding-top: 8px;
   color: white;
+  position: relative;
+  animation: animate 1s ease-in-out;
 }
 /* @media (max-width: 620px) {
   .img-description {
     font-size: 14px;
   }
 } */
-#checkbox1:checked ~ .slider .slide1,
-#checkbox2:checked ~ .slider .slide2,
-#checkbox3:checked ~ .slider .slide3,
-#checkbox4:checked ~ .slider .slide4,
-#checkbox5:checked ~ .slider .slide5 {
-  opacity: 1;
-  z-index: 1;
-  transform: scale(1);
+@keyframes animate {
+  from{
+    transform: scale(1.5);
+  }
+  to{
+    transform: scale(1);
+  }
 }
-#checkbox1:checked ~ .description .slider-description .slide1,
-#checkbox2:checked ~ .description .slider-description .slide2,
-#checkbox3:checked ~ .description .slider-description .slide3,
-#checkbox4:checked ~ .description .slider-description .slide4,
-#checkbox5:checked ~ .description .slider-description .slide5 {
-  opacity: 1;
-  z-index: 1;
-  transform: scale(1);
+.slides{
+  display: none;
 }
+
 label {
   cursor: pointer;
   display: inline-block;
@@ -124,15 +121,7 @@ label {
   border-radius: 50%;
   transition: background ease-in-out 0.5s;
 }
-label:nth-child(1),
-label:nth-child(2),
-label:nth-child(3),
-label:nth-child(4),
-label:nth-child(5) {
-  width: 17px;
-  height: 17px;
-  background-color: #5308ea8d;
-}
+
 .controls {
   display: flex;
   justify-content: center;
@@ -155,13 +144,7 @@ label:nth-child(5) {
 .little:hover{
   background-color: rgb(0, 126, 126);
 }
-#checkbox1:checked ~ .description .controls label:nth-child(1) > div,
-#checkbox2:checked ~ .description .controls label:nth-child(2) > div,
-#checkbox3:checked ~ .description .controls label:nth-child(3) > div,
-#checkbox4:checked ~ .description .controls label:nth-child(4) > div,
-#checkbox5:checked ~ .description .controls label:nth-child(5) > div{
-  background-color: rgb(0, 126, 126);
-}
+
 
 .wrapper label:active{
   background-color: rgb(200, 200, 200);
@@ -181,6 +164,7 @@ ul.slider-description {
 li.slide-description{
   width: auto;
     height: auto;
+    display: none;
 }
 .description{
   display: flex;
@@ -191,4 +175,40 @@ li.slide-description{
   width: 80%;
   background: black;
   padding: 30px;
+}
+#checkbox1:checked ~ .slider .slide1,
+#checkbox2:checked ~ .slider .slide2,
+#checkbox3:checked ~ .slider .slide3,
+#checkbox4:checked ~ .slider .slide4,
+#checkbox5:checked ~ .slider .slide5 {
+  opacity: 1;
+  z-index: 1;
+  transform: scale(1);
+  display: block;
+}
+#checkbox1:checked ~ .description .slider-description .slide1,
+#checkbox2:checked ~ .description .slider-description .slide2,
+#checkbox3:checked ~ .description .slider-description .slide3,
+#checkbox4:checked ~ .description .slider-description .slide4,
+#checkbox5:checked ~ .description .slider-description .slide5 {
+  opacity: 1;
+  z-index: 1;
+  transform: scale(1);
+  display: block;
+}
+label:nth-child(1),
+label:nth-child(2),
+label:nth-child(3),
+label:nth-child(4),
+label:nth-child(5) {
+  width: 17px;
+  height: 17px;
+  background-color: #5308ea8d;
+}
+#checkbox1:checked ~ .description .controls label:nth-child(1) > div,
+#checkbox2:checked ~ .description .controls label:nth-child(2) > div,
+#checkbox3:checked ~ .description .controls label:nth-child(3) > div,
+#checkbox4:checked ~ .description .controls label:nth-child(4) > div,
+#checkbox5:checked ~ .description .controls label:nth-child(5) > div{
+  background-color: rgb(0, 126, 126);
 }
