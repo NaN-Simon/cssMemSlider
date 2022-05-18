@@ -207,6 +207,12 @@ label:nth-child(5) {
 #checkbox5:checked ~ .description .controls label:nth-child(5) > div{
   background-color: rgb(0, 126, 126);
 }
+.wrapper label:active .little{
+  background-color: yellow;
+}
+.wrapper label:active{
+  background-color: yellow;
+}
 
 @media (max-width: 620px) {
   .description{
