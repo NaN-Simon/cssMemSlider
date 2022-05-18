@@ -215,6 +215,5 @@ label:nth-child(5) {
   }
   ul.slider-description{
     order: 1;
-    justify-content: center;
   }
 }
