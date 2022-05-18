@@ -94,11 +94,6 @@ li.slides {
   position: relative;
   animation: animate 1s ease-in-out;
 }
-/* @media (max-width: 620px) {
-  .img-description {
-    font-size: 14px;
-  }
-} */
 @keyframes animate {
   from{
     transform: scale(1.5);
@@ -133,7 +128,7 @@ label {
   transform: translate(0, -25%);
   width: 32px;
   height: 32px;
-  background: none; /* asd */
+  background: none;
 }
 .little {
   width: 17px;
@@ -211,4 +206,15 @@ label:nth-child(5) {
 #checkbox4:checked ~ .description .controls label:nth-child(4) > div,
 #checkbox5:checked ~ .description .controls label:nth-child(5) > div{
   background-color: rgb(0, 126, 126);
+}
+
+@media (max-width: 620px) {
+  .description{
+    flex-direction: column;
+    height: 11em;
+  }
+  ul.slider-description{
+    order: 1;
+    justify-content: center;
+  }
 }
